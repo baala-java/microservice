@@ -3,4 +3,4 @@ FROM java:8
 COPY target/eureka-naming-server.jar app.jar
 RUN bash -c 'touch/app.jar'
 EXPOSE 8010
-ENTRYPOINT ["java","-jar","app.jar"]		
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]		
